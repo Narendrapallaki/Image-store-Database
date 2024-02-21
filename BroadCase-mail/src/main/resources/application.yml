@@ -1,0 +1,24 @@
+server:
+  port: 1112
+logging:
+  file:
+    name: "C:/logs/boardcast-mail-service-error.log"
+  logback:
+    rollingpolicy:
+      file-name-pattern: C:/logs/boardcast-mail-service-%d{yyyy-MM-dd}.%i.log
+spring:
+  mail:
+    host: smtp.gmail.com
+    password: fxwnacokcnahlbme
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: pawankarri55@gmail.com
+
+files:
+  storage: C:/eidikoportal/
+
