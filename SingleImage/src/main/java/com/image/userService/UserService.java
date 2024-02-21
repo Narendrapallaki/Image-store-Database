@@ -26,14 +26,15 @@ public class UserService {
 	
 	public void save(User user,MultipartFile multipartFile) throws SerialException, SQLException, IOException
 	{
-		log.info(multipartFile.getOriginalFilename());
+		log.info("file name {}",multipartFile.getOriginalFilename());
 		  // User user=new User();
 		   
 		   user.setImage(new javax.sql.rowset.serial.SerialBlob(multipartFile.getBytes()));
 		   
 		   
 		   User save = userRepository.save(user);
-		   log.info("save user id : ",String.valueOf(save.getId()));
+		   
+		   log.info("save user id {} ",String.valueOf(save.getId()));
 	}
 
 }
